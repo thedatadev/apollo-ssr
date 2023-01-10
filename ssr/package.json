@@ -1,0 +1,28 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:client": "esbuild src/index.jsx --bundle --outfile=dist/bundle.js --loader:.js=jsx",
+    "build:server": "esbuild server.jsx --bundle --outfile=build/server.js --platform=node",
+    "build": "npm run build:client && npm run build:server",
+    "start": "node ./build/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@apollo/client": "^3.6.9",
+    "cross-fetch": "^3.1.5",
+    "esbuild": "0.14.13",
+    "express": "^4.17.1",
+    "graphql": "^14.5.7",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router": "^3.2.4"
+  },
+  "devDependencies": {
+    "nodemon": "1.18.4"
+  }
+}

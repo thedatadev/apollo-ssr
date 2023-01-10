@@ -6,7 +6,7 @@ import { useQuery, gql } from "@apollo/client";
 export default function App(props) {
   return (
     <div>
-      <h1>CSR App</h1>
+      <h1>SSR App</h1>
       <ul role="nav">
         <li>
           <Link to="/about">About</Link>
@@ -28,7 +28,7 @@ export function About() {
   return (
     <div>
       <h1>About</h1>
-      <p>This page is CLIENT-side rendered!</p>
+      <p>This page is SERVER-side rendered!</p>
     </div>
   );
 }
