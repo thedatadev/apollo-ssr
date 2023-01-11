@@ -7,7 +7,8 @@ import routes from '../routes'
 
 const client = new ApolloClient({
     uri: "http://localhost:4000",
-    cache: new InMemoryCache(),
+    cache: new InMemoryCache().restore(JSON.parse(window.__APOLLO_STATE__)),
+    connectToDevTools: true,
 });
 
 ReactDOM.hydrate(

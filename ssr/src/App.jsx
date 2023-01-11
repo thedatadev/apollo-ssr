@@ -58,7 +58,7 @@ export function Players() {
   if (loading) {
     return <p>Loading players...</p>;
   }
-
+  
   return (
     <div>
       <h1>Players</h1>
